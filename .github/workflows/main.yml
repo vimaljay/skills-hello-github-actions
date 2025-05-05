@@ -1,0 +1,13 @@
+name: Auto Greeting on Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the committer
+        run: echo "Hello, ${{ github.actor }}! Thanks for pushing to the main branch."
