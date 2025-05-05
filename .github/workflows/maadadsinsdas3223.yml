@@ -8,8 +8,8 @@ inputs:
   name: "type your name"
 jobs:
     greetings:
-    runs-on: ubuntu-latest
-    steps:
-        name: printdata
-        run echo " input guy" $ {{ github.event.inputs.name }}:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Print data
+        run: echo "Input guy: ${{ github.event.inputs.name }}"
      
