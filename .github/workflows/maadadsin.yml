@@ -2,11 +2,13 @@ name: my-first23
 on:
   Push:
     branches:
-       main
+       - main
+workflow-dispatch:
+inputs:
+  name: "type your name"
 jobs:
   greetings:
    runs-on: ubuntu-latest
      steps:
-     input: type your name
-     echo name
+        echo " input guy" $ {{ github.event.name }}
      
