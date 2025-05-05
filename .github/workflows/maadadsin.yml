@@ -1,0 +1,11 @@
+name: my-first23
+on:
+  Push:
+    branches:
+       main
+jobs:
+   runs-on:ubuntu-latest
+     steps
+     input type your name
+     echo name
+     
