@@ -1,4 +1,5 @@
 name: Greeting Workflow
+
 on:
   workflow_dispatch:
     inputs:
@@ -12,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Greeting
-     #   run: echo "Greeting message: ${{ github.event.inputs.greeting }}"
+        run: echo "Greeting message: '${{ github.event.inputs.greeting }}'"
