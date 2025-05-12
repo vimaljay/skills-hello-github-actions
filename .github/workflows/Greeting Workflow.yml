@@ -1,0 +1,15 @@
+name: Greeting Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      greeting:
+        description: "Type your greeting message"
+        required: true
+        default: "Hello, World!"
+
+jobs:
+  display-greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Greeting
+        run: echo "Greeting message: ${{ github.event.inputs.greeting }}"
